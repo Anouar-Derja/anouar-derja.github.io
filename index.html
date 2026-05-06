@@ -12,7 +12,7 @@
       fill='%23f7b500'>AD</text>
   </svg>"
 />
-  <title>Anouar Derja | Portfolio</title>
+  <title>Anouar Derja </title>
 <meta name="description" content="Anouar Derja is a Junior Full-Stack Developer building real-world business systems with C#, SQL, JavaScript, and clean architecture. Portfolio showcasing professional projects and skills." />
 <meta name="keywords" content="Anouar Derja, Full-Stack Developer, Frontend Developer, C++, C#, Algorithms, SQL, Portfolio, Junior Developer" />
 <meta name="author" content="Anouar Derja" />
@@ -37,39 +37,72 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
+<div class="blob blob-1"></div>
+<div class="blob blob-2"></div>
 <!-- NAVBAR -->
-<nav class="navbar">
-  <div class="logo">ANOUAR</div>
-
-  <ul class="nav-links" id="navLinks">
-  <li><a href="#" data-page="home" class="active">Home</a></li>
-  <li><a href="#" data-page="about">About</a></li>
-  <li><a href="#" data-page="skills">Skills</a></li>
-  <li><a href="#" data-page="certificates">Certificates</a></li>
-  <li><a href="#" data-page="projects">Projects</a></li>
-  <li><a href="#" data-page="contact">Contact</a></li>
-</ul>
-  
-   <div class="menu-toggle" id="menuToggle">☰</div>
-
+<nav class="navbar-adaptive">
+  <div class="nav-container">
+    <div id="menuToggle" class="menu-toggle">
+  ☰
+</div>
+      <ul class="nav-links" id="navLinks">
+      <li>
+        <a href="#" data-page="home" class="active">
+          <i class="ph-bold ph-house"></i> <span>HOME</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" data-page="about">
+          <i class="ph-bold ph-user"></i> <span>ABOUT</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" data-page="skills">
+          <i class="ph-bold ph-code"></i><span>SKILLS</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" data-page="education">
+          <i class="ph-bold ph-graduation-cap"></i> <span>EDUCATION</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" data-page="projects">
+          <i class="ph-bold ph-briefcase"></i> <span>PROJECTS</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" data-page="contact">
+          <i class="ph-bold ph-envelope"></i> <span>CONTACT</span>
+        </a>
+      </li>
+    </ul>
+  </div>
 </nav>
+
+<!-- Add this in your <head> for icons -->
+<script src="https://unpkg.com/@phosphor-icons/web"></script>
 
 
 <!-- HOME -->
 <section id="home" class="page active">
   <div class="home">
     <div class="home-text">
-      <h1>Hi, I'm <span>Anouar Derja</span></h1>
-      <h2>Backend Developer | C#, .NET, SQL Server</h2>
-      <p> I build scalable backend systems with clean architecture, secure authentication, and reliable database design using C#, .NET, and SQL Server. 
-        I focus on writing maintainable code and delivering real-world solutions.
+      <h1 class="hero-title">
+        Hi, It’s <span class="name">Anouar Derja</span>
+      </h1>
+      <h2 class="typing-role">
+      <span class="prefix">I'm a </span>
+      <span id="typing"></span>
+      </h2>
+      <p> I build scalable backend systems with C#, .NET, and SQL Server, focusing on clean architecture, secure authentication, and efficient data design.  
+       I aim to deliver maintainable, production-ready solutions that solve real-world business problems.
      </p>
     </div>
 
-    <div class="home-image">
-      <img src="portfolio3.jpg" alt="Anouar Derja" class="profile-img">
-    </div>
+    <div class="image-glow">
+  <img src="portfolio3.jpg" class="profile-img">
+</div>
   </div>
 </section>
 
@@ -87,20 +120,25 @@
 
   <!-- SHORT BIO -->
   <p class="about-bio">
-   I am a backend developer specializing in C#, .NET, and SQL Server, with hands-on experience building real-world applications. 
-   I focus on clean architecture, reliable database systems, and writing maintainable code.
+   I am a backend developer specializing in C#, .NET, and SQL Server, with hands-on experience building real-world applications. I focus on clean architecture, reliable database systems,
+    and writing maintainable, production-ready code.
   </p>
-
   <!-- INFO LIST -->
   <div class="about-info">
-    <p><strong>Name:</strong> Anouar Derja</p>
-    <p><strong>Birthday:</strong> 08/04/2004</p>
     <p><strong>Country:</strong> Morocco</p>
     <p><strong>Email:</strong> anouar@anouarderja.com</p> 
   </div>
+<div class="about-buttons">
+  <a href="Anouar_Derja_Backend_Developer.pdf" class="btn" download>
+    <i class="ph-bold ph-file-arrow-down"></i> Download CV 
+  </a>
 
-  <a href="Anouar_Derja_CV.pdf" class="btn" download>
-  Download CV
+  <a href="https://github.com/Anouar-Derja" target="_blank" class="btn btn-outline">
+    <i class="ph-bold ph-github-logo"></i> GitHub
+  </a>
+
+  <a href="https://www.linkedin.com/in/anouar-derja/" target="_blank" class="btn btn-outline">
+    <i class="ph-bold ph-linkedin-logo"></i> LinkedIn
   </a>
 </div>
 </section>
@@ -110,273 +148,413 @@
 <!-- SKILLS -->
 
 <section id="skills" class="page">
-  <h2 class="section-title">My Skills</h2>
+  <h2 class="section-title">Skills</h2>
+  <p class="section-subtitle">Programming languages, tools, and architectural patterns.</p>
 
-  <div class="skills-grid">
-
-    <div class="skill-card reveal">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML">
-      <h3>HTML</h3>
-      <p>
-        I build clean, semantic, and accessible page structures with proper layout
-        hierarchy and SEO-friendly markup.
-      </p>
+  <div class="skills-minimal-grid">
+    <!-- .NET Core -->
+    <div class="skill-item reveal">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dotnetcore/dotnetcore-original.svg" alt=".NET Core">
+      <h3>.NET Core</h3>
+      <span class="skill-level">Intermediate</span>
     </div>
 
-    <div class="skill-card reveal">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS">
-      <h3>CSS</h3>
-      <p>
-        I create modern, responsive layouts using Flexbox, Grid, transitions,
-        animations, and dark UI design principles.
-      </p>
-    </div>
-
-    <div class="skill-card reveal">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript">
-      <h3>JavaScript</h3>
-      <p>
-        I use JavaScript to add logic, interactivity, DOM manipulation,
-        IndexedDB, and structured application behavior.
-      </p>
-    </div>
-
-    <div class="skill-card reveal">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" alt="C++">
-      <h3>C++ & Algorithms</h3>
-      <p>
-        Solved 400+ problems using C++, focusing on data structures,
-        algorithms, complexity, and clean problem-solving logic.
-      </p>
-    </div>
-
-    <div class="skill-card reveal">
+    <!-- C# -->
+    <div class="skill-item reveal">
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" alt="C#">
       <h3>C# & OOP</h3>
-      <p>
-        Built desktop systems using C# with OOP principles and
-        clean 3-Tier Architecture.
-      </p>
+      <span class="skill-level">Advanced</span>
     </div>
 
-    <div class="skill-card reveal">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git">
-      <h3>Git & GitHub</h3>
-      <p>
-        I use Git for version control and GitHub to manage repositories,
-        commits, documentation, and project history.
-      </p>
-    </div>
-
-    <div class="skill-card reveal">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg"  alt="SQL">
+    <!-- SQL Server -->
+    <div class="skill-item reveal">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg" alt="SQL">
       <h3>SQL & T-SQL</h3>
-      <p>
-       I design and query relational databases using SQL and T-SQL, focusing on efficient queries, data integrity, and performance.
-      </p>
+      <span class="skill-level">Advanced</span>
     </div>
 
-  </div>
-</section>
-
-
-<!-- CERTIFICATES -->
-<section id="certificates" class="page">
-  <h2 class="section-title">Certificates</h2>
-  <p class="section-subtitle">
-    Professional training & structured learning path
-  </p>
-
-  <div class="cert-grid">
-
-    <div class="cert-card">
-      <h3>Algorithms</h3>
-      <span class="cert-count">6 Certificates</span>
-      <p>
-        Problem solving, time complexity, patterns, and advanced algorithmic thinking.
-      </p>
+    <!-- SOLID Principles -->
+    <div class="skill-item reveal">
+      <div class="skill-icon-text">🏗️</div>
+      <h3>SOLID</h3>
+      <span class="skill-level">Advanced</span>
     </div>
 
-    <div class="cert-card">
-      <h3>C++ & OOP Foundations</h3>
-      <span class="cert-count">4 Certificates</span>
-      <p>
-        C++ fundamentals, object-oriented programming, memory, and clean logic.
-      </p>
-    </div>
-
-    <div class="cert-card">
-      <h3>Data Structures</h3>
-      <span class="cert-count">2 Certificates</span>
-      <p>
-        Arrays, linked lists, stacks, queues, and performance-focused design.
-      </p>
-    </div>
-
-    <div class="cert-card">
-      <h3>C# & OOP</h3>
-      <span class="cert-count">5 Certificates</span>
-      <p>
-        Desktop development, OOP principles, layered architecture, and clean code.
-      </p>
-    </div>
-
-    <div class="cert-card">
-      <h3>Database & SQL (T-SQL)</h3>
-      <span class="cert-count">3 Certificates</span>
-      <p>
-        Database design, queries, joins, procedures, and performance optimization.
-      </p>
-    </div>
-
-    <div class="cert-card">
-      <h3>Windows Services</h3>
-      <span class="cert-count">1 Certificate</span>
-      <p>
-        Background services, system-level execution, and service lifecycle.
-      </p>
-    </div>
-
-    <div class="cert-card">
+    <!-- RESTful API -->
+    <div class="skill-item reveal">
+      <div class="skill-icon-text">🌐</div>
       <h3>RESTful API</h3>
-      <span class="cert-count">1 Certificate</span>
-      <p>
-        REST principles, endpoints, HTTP methods, and backend communication.
-      </p>
+      <span class="skill-level">Advanced</span>
     </div>
 
-    <div class="cert-card">
-      <h3>SOLID Principles</h3>
-      <span class="cert-count">1 Certificate</span>
-      <p>
-        Clean architecture, maintainable code, and scalable design principles.
-      </p>
+    <!-- Windows Services -->
+    <div class="skill-item reveal">
+      <div class="skill-icon-text">⚙️</div>
+      <h3>Win Services</h3>
+      <span class="skill-level">Intermediate</span>
     </div>
 
-    <div class="cert-card">
-      <h3>Frontend Foundations</h3>
-      <span class="cert-count">3 Certificates</span>
-      <p>
-        HTML, CSS, and JavaScript fundamentals for modern web development.
-      </p>
+    <!-- C++ & Algorithms -->
+    <div class="skill-item reveal">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" alt="C++">
+      <h3>C++ & Algos</h3>
+      <span class="skill-level">Intermediate</span>
     </div>
 
+    <!-- Github -->
+    <div class="skill-item reveal">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git">
+      <h3>Github</h3>
+      <span class="skill-level">Intermediate</span>
+    </div>
+
+    <!-- JavaScript -->
+    <div class="skill-item reveal">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JS">
+      <h3>JavaScript</h3>
+      <span class="skill-level">Intermediate</span>
+    </div>
+
+    <!-- HTML5 -->
+    <div class="skill-item reveal">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML5">
+      <h3>HTML5</h3>
+      <span class="skill-level">Intermediate</span>
+    </div>
+
+    <!-- CSS3 -->
+    <div class="skill-item reveal">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS3">
+      <h3>CSS3</h3>
+      <span class="skill-level">Intermediate</span>
+    </div>
+  </div>
+</section>
+
+<!-- Education -->
+<section id="education" class="page">
+  <h2 class="section-title">Education & Experience</h2>
+  
+  <div class="timeline-container">
+    <!-- The Progress Bar -->
+    <div class="timeline-line-bg"></div>
+    <div class="timeline-line-fill" id="timelineFill"></div>
+
+    <!-- Item 1: Card Left, Year Right -->
+    <div class="timeline-item left reveal">
+      <div class="timeline-content">
+        
+        <h3>High School Diploma</h3>
+        <p class="location">Al Khawarizmi | Safi, Morocco</p>
+        <p>Electrical Engineering</p>
+      </div>
+      <div class="timeline-year">2022</div>
+      <div class="timeline-dot"></div>
+    </div>
+
+    <!-- Item 2: Card Right, Year Left -->
+    <div class="timeline-item right reveal">
+      <div class="timeline-content">
+        
+        <h3>Product Designer</h3>
+        <p class="location">Merch by Amazon (Freelance)</p>
+        <p>Created original designs for print-on-demand products. Creativity, Visual Communication, Trends.</p>
+      </div>
+      <div class="timeline-year">2023</div>
+      <div class="timeline-dot"></div>
+    </div>
+
+    <!-- Item 3: Card Left, Year Right -->
+    <div class="timeline-item left reveal">
+      <div class="timeline-content">
+        
+        <h3>Backend Development</h3>
+        <p class="location">Programming Advices</p>
+        <p>Building scalable backend systems with a focus on clean architecture, APIs, and performance.</p>
+      </div>
+      <div class="timeline-year">2024 - Present</div>
+      <div class="timeline-dot"></div>
+    </div>
   </div>
 </section>
 
 
-<!-- PROJECTS -->
+<!-- PROJECTS SECTION -->
 <section id="projects" class="page">
   <h2 class="section-title">Projects</h2>
-   <p class="section-subtitle">
-      Selected projects demonstrating real business logic, clean architecture,
-      and production-style system design. Full details available on GitHub.
-   </p>
+  <p class="section-subtitle">Selected projects demonstrating real business logic, clean architecture, and production-style system design.</p>
+
   <div class="projects-grid">
-
-    <!-- Project 1 -->
-    <div class="project-card">
-      <div class="project-header">
-        <span class="project-icon">🛒</span>
-        <h3>Clothes Store (Frontend)</h3>
+    
+    <!-- Project 01: Clothes Store -->
+    <div class="project-card reveal">
+      <div class="project-content-inner">
+        <div class="project-header">
+          <span class="project-icon">🛒</span>
+          <h3>Clothes Store (Frontend)</h3>
+        </div>
+        <p class="project-desc">
+          E-commerce-style frontend application featuring product search, category filtering, cart management, and persistent client-side storage using IndexedDB.
+        </p>
+        <div class="project-tech"><strong>TECH:</strong> HTML, CSS, JAVASCRIPT, INDEXEDDB</div>
+        
+        <div class="project-screenshot">
+          <img src="clothes-store-preview.png" alt="Clothes Store Screenshot"> <!-- Replace with your actual image path -->
+        </div>
+        
+        <a href="https://github.com/Anouar-Derja/PrClothes_Project" class="project-btn">View on GitHub</a>
       </div>
-
-      <p class="project-desc">
-         E-commerce-style frontend application featuring product search,
-         tegory filtering, cart management, and persistent client-side storage
-          using IndexedDB.
-      </p>
-
-      <p class="project-tech">
-        <strong>Tech:</strong> HTML, CSS, JavaScript, IndexedDB
-      </p>
-
-      <a href="https://github.com/Anouar-Derja/PrClothes_Project"
-         target="_blank"
-         class="project-btn">
-        View on GitHub
-      </a>
     </div>
 
-    <!-- Project 2 -->
-    <div class="project-card">
-      <div class="project-header">
-        <span class="project-icon">🏦</span>
-        <h3>Bank Management System</h3>
+    <!-- Project 02: Bank Management System -->
+    <div class="project-card reveal">
+      <div class="project-content-inner">
+        <div class="project-header">
+          <span class="project-icon">🏦</span>
+          <h3>Bank Management System</h3>
+        </div>
+        <p class="project-desc">
+          Full desktop banking system implementing real-world business logic, secure authentication, account management, and data integrity using a clean 3-Tier architecture.
+        </p>
+        <div class="project-tech"><strong>TECH:</strong> C#, SQL , OOP, 3-TIER ARCHITECTURE</div>
+        
+        <div class="project-screenshot">
+          <img src="bank-system-preview.png" alt="Bank Management System Screenshot"> <!-- Replace with your actual image path -->
+        </div>
+        
+        <a href="https://github.com/Anouar-Derja/PrBank-Management-System" class="project-btn">View on GitHub</a>
       </div>
-
-      <p class="project-desc">
-        Full desktop banking system implementing real-world business logic,
-        secure authentication, account management, transactions, and data integrity
-        using a clean 3-tier architecture.
-      </p>
-
-      <p class="project-tech">
-        <strong>Tech:</strong> C#, SQL Server, OOP, 3-Tier Architecture
-      </p>
-      <a href="https://github.com/Anouar-Derja/PrBank-Management-System"
-         target="_blank"
-         class="project-btn">
-        View on GitHub
-      </a>
     </div>
 
-    <!-- Project 3 -->
-    <div class="project-card">
-      <div class="project-header">
-        <span class="project-icon">🔐</span>
-        <h3>DVLD Management System</h3>
+    <!-- Project 03: DVLD Management System -->
+    <div class="project-card reveal">
+      <div class="project-content-inner">
+        <div class="project-header">
+          <span class="project-icon">🔐</span>
+          <h3>DVLD Management System</h3>
+        </div>
+        <p class="project-desc">
+          Administrative management system designed with SOLID principles and structured business logic to ensure maintainability, scalability, and clear separation of concerns.
+        </p>
+        <div class="project-tech"><strong>TECH:</strong> C#, SQL, OOP, SOLID PRINCIPLES</div>
+        
+        <div class="project-screenshot">
+          <img src="dvld-system-preview.png" alt="DVLD Management System Screenshot"> <!-- Replace with your actual image path -->
+        </div>
+        
+        <a href="https://github.com/Anouar-Derja/PrDVLD_Project" class="project-btn">View on GitHub</a>
       </div>
-
-      <p class="project-desc">
-       Administrative management system designed with clean architecture,
-       SOLID principles, and structured business logic to ensure maintainability,
-       scalability, and clear separation of concerns.
-      </p>
-
-      <p class="project-tech">
-        <strong>Tech:</strong> C#, SQL, OOP, SOLID Principles
-      </p>
-      <a href="https://github.com/Anouar-Derja/PrDVLD_Project"
-         target="_blank"
-         class="project-btn">
-        View on GitHub
-      </a>
     </div>
 
   </div>
 </section>
-
 
 <!-- CONTACT -->
-<section id="contact" class="page contact">
-  <h2 class="section-title">Contact</h2>
+<div id="stars"></div>
 
-  <p class="contact-text">
-    Interested in my work or want to collaborate?
-    Feel free to reach out.
-  </p>
+<section id="contact" class="contact-wrapper">
 
-  <div class="contact-actions">
-    <a href="https://github.com/Anouar-Derja"
-       target="_blank"
-       class="contact-btn primary">
-      Visit My GitHub
-    </a>
+  <!-- LEFT: CONTACT -->
+  <div class="contact-card">
+  <h2>Contact</h2>
+  <h4>Get in Touch</h4>
 
-    <a href="mailto:anouar@anouarderja.com"
-       class="contact-btn secondary">
-      Email Me
-    </a>
-  </div>
+  <form class="contact-form" id="contactForm">
+  <input type="text" name="name" placeholder="Your Name" required>
+
+  <input type="email" name="email" placeholder="Your Email" required>
+
+  <textarea name="message" placeholder="Your Message" required></textarea>
+
+  <button type="submit">Send Message</button>
+</form>
+</div>
+
+  <!-- RIGHT: EARTH -->
+<canvas id="globeCanvas"></canvas>
 </section>
+<footer class="footer">
+  <a href="https://www.linkedin.com/in/anouar-derja/" target="_blank">
+    <i class="ph-bold ph-linkedin-logo"></i>
+  </a>
 
-
-<footer>
-  <p>© 2025 Anouar Derja</p>
+  <a href="https://github.com/Anouar-Derja" target="_blank">
+    <i class="ph-bold ph-github-logo"></i>
+  </a>
 </footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="earth-grid.js"></script>
 
+<script>
+const canvas = document.getElementById("globeCanvas");
 
+// SCENE
+const scene = new THREE.Scene();
+
+// CAMERA
+const camera = new THREE.PerspectiveCamera(
+  45,
+  canvas.clientWidth / canvas.clientHeight,
+  0.1,
+  1000
+);
+
+// 👉 Perfect medium size
+camera.position.z = 3.8;
+
+// RENDERER
+const renderer = new THREE.WebGLRenderer({
+  canvas: canvas,
+  antialias: true,
+  alpha: true
+});
+renderer.setSize(canvas.clientWidth, canvas.clientHeight);
+
+// =======================
+// 🌟 THICK GOLD MATERIAL
+// =======================
+const material = new THREE.MeshBasicMaterial({
+  color: 0xffcc00
+});
+
+// Helper → create thick tube line
+function createLine(points) {
+  const curve = new THREE.CatmullRomCurve3(points);
+
+  const geometry = new THREE.TubeGeometry(
+    curve,
+    100,
+    0.015,   // 🔥 thickness (increase if needed)
+    8,
+    false
+  );
+
+  return new THREE.Mesh(geometry, material);
+}
+
+// GROUP
+const group = new THREE.Group();
+
+// =======================
+// 🔵 LATITUDE (FEWER)
+// =======================
+for (let i = -3; i <= 3; i++) {
+  const points = [];
+
+  for (let j = 0; j <= 100; j++) {
+    const theta = (j / 100) * Math.PI * 2;
+
+    const x = Math.cos(theta) * Math.cos(i * 0.4);
+    const y = Math.sin(i * 0.4);
+    const z = Math.sin(theta) * Math.cos(i * 0.4);
+
+    points.push(new THREE.Vector3(x, y, z));
+  }
+
+  group.add(createLine(points));
+}
+
+// =======================
+// 🟡 LONGITUDE (FEWER)
+// =======================
+for (let i = 0; i < 8; i++) {
+  const points = [];
+
+  for (let j = 0; j <= 100; j++) {
+    const theta = (j / 100) * Math.PI;
+
+    const x = Math.sin(theta) * Math.cos(i * Math.PI / 4);
+    const y = Math.cos(theta);
+    const z = Math.sin(theta) * Math.sin(i * Math.PI / 4);
+
+    points.push(new THREE.Vector3(x, y, z));
+  }
+
+  group.add(createLine(points));
+}
+
+// =======================
+// 🔥 SIZE (MEDIUM)
+// =======================
+group.scale.set(1.0, 1.0, 1.0);
+scene.add(group);
+
+// =======================
+// ✨ SOFT GOLD GLOW
+// =======================
+const glow = new THREE.Mesh(
+   new THREE.SphereGeometry(1.02, 32, 32), // 👈 very close to globe
+  new THREE.MeshBasicMaterial({
+    color: 0xffcc00,
+    transparent: true,
+    opacity: 0.06,
+    side: THREE.BackSide // 👈 important (wraps nicely)
+  })
+);
+glow.scale.set(1.0, 1.0, 1.0); // match group scale
+scene.add(glow);
+
+// =======================
+// 🔄 ROTATION
+// =======================
+function animate() {
+  requestAnimationFrame(animate);
+
+  group.rotation.y += 0.0025;
+
+  renderer.render(scene, camera);
+}
+
+animate();
+
+// =======================
+// 📱 RESIZE
+// =======================
+window.addEventListener("resize", () => {
+  const width = canvas.clientWidth;
+  const height = canvas.clientHeight;
+
+  renderer.setSize(width, height);
+  camera.aspect = width / height;
+  camera.updateProjectionMatrix();
+});
+</script>
+<script>
+const form = document.getElementById("contactForm");
+
+form.addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const name = form.querySelector("input[name='name']").value;
+  const email = form.querySelector("input[name='email']").value;
+  const message = form.querySelector("textarea[name='message']").value;
+
+  const subject = "New Message from Portfolio";
+
+  const body = `
+Hello Anouar,
+
+You received a new message from your portfolio website.
+
+------------------------------
+
+👤 Name: ${name}
+📧 Email: ${email}
+
+💬 Message:
+${message}
+
+------------------------------
+
+Reply directly to this email to respond.
+
+– Portfolio System
+`;
+
+  window.location.href =
+    `mailto:anouar@anouarderja.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+});
+</script>
 </body>
 <script src="script.js"></script>
 </html>
