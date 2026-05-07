@@ -360,13 +360,25 @@
   <h4>Get in Touch</h4>
 
   <form class="contact-form" id="contactForm">
-  <input type="text" name="name" placeholder="Your Name" required>
+   <input
+    type="text"
+    name="name"
+    placeholder="Your Name"
+    required
+  >
+  <input
+    type="email"
+    name="email"
+    placeholder="Your Email"
+    required
+  >
 
-  <input type="email" name="email" placeholder="Your Email" required>
-
-  <textarea name="message" placeholder="Your Message" required></textarea>
-
-  <button type="submit">Send Message</button>
+   <textarea
+    name="message"
+    placeholder="Your Message"
+    required
+  ></textarea>
+    <button type="submit">Send Message</button>
 </form>
 </div>
 
@@ -400,7 +412,7 @@ const camera = new THREE.PerspectiveCamera(
 );
 
 // 👉 Perfect medium size
-camera.position.z = 3.8;
+camera.position.z = 2.9;
 
 // RENDERER
 const renderer = new THREE.WebGLRenderer({
@@ -519,42 +531,33 @@ window.addEventListener("resize", () => {
   camera.updateProjectionMatrix();
 });
 </script>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
 <script>
+emailjs.init("7g1_ZPuKl3JG1jXTI");
+
 const form = document.getElementById("contactForm");
 
 form.addEventListener("submit", function(e) {
   e.preventDefault();
 
-  const name = form.querySelector("input[name='name']").value;
-  const email = form.querySelector("input[name='email']").value;
-  const message = form.querySelector("textarea[name='message']").value;
-
-  const subject = "New Message from Portfolio";
-
-  const body = `
-Hello Anouar,
-
-You received a new message from your portfolio website.
-
-------------------------------
-
-👤 Name: ${name}
-📧 Email: ${email}
-
-💬 Message:
-${message}
-
-------------------------------
-
-Reply directly to this email to respond.
-
-– Portfolio System
-`;
-
-  window.location.href =
-    `mailto:anouar@anouarderja.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  emailjs.send("service_s4cpytl", "template_wb7lp9f", {
+    from_name: form.name.value,
+    from_email: form.email.value,
+    message: form.message.value,
+  })
+  .then(() => {
+    alert("Message sent successfully!");
+    form.reset();
+  })
+  .catch((error) => {
+    console.log(error);
+    alert("Failed to send message.");
+  });
 });
 </script>
+
 </body>
 <script src="script.js"></script>
 </html>
