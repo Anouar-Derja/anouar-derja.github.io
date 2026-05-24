@@ -37,8 +37,9 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<div class="blob blob-1"></div>
-<div class="blob blob-2"></div>
+<div id="particles-js"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
 <!-- NAVBAR -->
 <nav class="navbar-adaptive">
   <div class="nav-container">
@@ -112,35 +113,100 @@
   <div class="about-container">
 
     <div class="about-image">
-      <img src="portfolio3.jpg" alt="Anouar Derja" class="profile-img">
+    <div class="image-glow animated-border-card">
+    <img src="portfolio3.jpg" alt="Anouar Derja" class="profile-img">
+     </div>
+     </div>
+
+  
+      <div class="about-text">
+  <!-- 💻 TERMINAL WINDOW CORES -->
+  <div class="terminal-window">
+    <div class="terminal-header">
+      <div class="terminal-dots">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+      </div>
+      <div class="terminal-title">story.txt</div>
+    </div>
+    
+    <div class="terminal-body">
+      <p><span class="terminal-prompt">$</span> I am a <span class="highlight-text">backend developer</span> specializing in C#, .NET, and SQL Server, passionate about building robust software architecture.</p>
+  
+      <p><span class="terminal-prompt">$</span> I design scalable systems utilizing <span class="highlight-text-yellow">Clean Architecture</span> and SOLID principles to write highly-testable, decoupled code.</p>
+  
+      <p><span class="terminal-prompt">$</span> <span class="status-badge">● Open to Work</span> Looking for remote backend roles or engineering opportunities.</p>
+    </div>
+  </div>
+
+  <!-- 📂 ALL FOUR BOXES IN ONE LINE -->
+  <div class="terminal-badges">
+    
+    <div class="badge-card text-yellow">
+      <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 15a6 6 0 1 0 0-12 6 6 0 0 0 0 12Z"/>
+        <path d="M12 15v7l3-2 3 2v-7"/>
+        <path d="M12 15H9l-3 2v-7"/>
+      </svg>
+      <span>300+ Challenges</span>
     </div>
 
-   <div class="about-text">
-  <h2>About Me</h2>
+    <div class="badge-card text-gray">
+      <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/>
+        <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/>
+      </svg>
+      <span>Backend Graduate</span>
+    </div>
 
-  <!-- SHORT BIO -->
-  <p class="about-bio">
-   I am a backend developer specializing in C#, .NET, and SQL Server, with hands-on experience building real-world applications. I focus on clean architecture, reliable database systems,
-    and writing maintainable, production-ready code.
-  </p>
-  <!-- INFO LIST -->
-  <div class="about-info">
-    <p><strong>Country:</strong> Morocco</p>
-    <p><strong>Email:</strong> anouar@anouarderja.com</p> 
+    <div class="badge-card text-yellow">
+      <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 15a6 6 0 1 0 0-12 6 6 0 0 0 0 12Z"/>
+        <path d="M12 15v7l3-2 3 2v-7"/>
+        <path d="M12 15H9l-3 2v-7"/>
+      </svg>
+      <span>+30 Certificates</span>
+    </div>
+
+    <div class="badge-card text-gray">
+      <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+      </svg>
+      <span>+40 Courses</span>
+    </div>
+
   </div>
+
+ 
+<!-- CALL TO ACTION BUTTONS -->
 <div class="about-buttons">
-  <a href="Anouar_Derja_Backend_Developer.pdf" class="btn" download>
-    <i class="ph-bold ph-file-arrow-down"></i> Download CV 
+  <!-- CV Download Button (Points to your PDF file) -->
+  <a href="Anouar_Derja_Backend_Developer.pdf" download="Anouar_Derja_Backend_Developer.pdf" class="btn btn-primary">
+    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+    </svg>
+    Download CV
   </a>
 
-  <a href="https://github.com/Anouar-Derja" target="_blank" class="btn btn-outline">
-    <i class="ph-bold ph-github-logo"></i> GitHub
+  <!-- GitHub Button (Opens in a new tab) -->
+  <a href="https://github.com/Anouar-Derja" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+    </svg>
+    GitHub
   </a>
 
-  <a href="https://www.linkedin.com/in/anouar-derja/" target="_blank" class="btn btn-outline">
-    <i class="ph-bold ph-linkedin-logo"></i> LinkedIn
+  <!-- LinkedIn Button (Opens in a new tab) -->
+  <a href="https://www.linkedin.com/in/anouar-derja/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM4 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/>
+    </svg>
+    LinkedIn
   </a>
 </div>
+
 </section>
 
 
@@ -156,7 +222,7 @@
     <div class="skill-item reveal">
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dotnetcore/dotnetcore-original.svg" alt=".NET Core">
       <h3>.NET Core</h3>
-      <span class="skill-level">Intermediate</span>
+      <span class="skill-level">Advanced</span>
     </div>
 
     <!-- C# -->
@@ -198,14 +264,14 @@
     <div class="skill-item reveal">
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" alt="C++">
       <h3>C++ & Algos</h3>
-      <span class="skill-level">Intermediate</span>
+      <span class="skill-level">Advanced</span>
     </div>
 
     <!-- Github -->
     <div class="skill-item reveal">
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git">
       <h3>Github</h3>
-      <span class="skill-level">Intermediate</span>
+      <span class="skill-level">Advanced</span>
     </div>
 
     <!-- JavaScript -->
@@ -228,6 +294,11 @@
       <h3>CSS3</h3>
       <span class="skill-level">Intermediate</span>
     </div>
+    <div class="skill-item">
+  <img src="https://jwt.io/img/pic_logo.svg" alt="JWT Logo" class="jwt-skill-icon">
+  <h3>JWT</h3>
+  <span class="skill-level">Intermediate</span>
+</div>
   </div>
 </section>
 
@@ -352,185 +423,104 @@
 <!-- CONTACT -->
 <div id="stars"></div>
 
-<section id="contact" class="contact-wrapper">
+<!-- CONTACT SECTION -->
+<section id="contact" class="contact-modern">
+  <div class="contact-wrapper">
+    
+    <!-- LEFT SIDE: CONTACT CARD -->
+    <div class="contact-card">
+      <h2>Contact</h2>
+      <h4>Get in Touch</h4>
 
-  <!-- LEFT: CONTACT -->
-  <div class="contact-card">
-  <h2>Contact</h2>
-  <h4>Get in Touch</h4>
+      <form class="contact-form" id="contactForm">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
 
-  <form class="contact-form" id="contactForm">
-   <input
-    type="text"
-    name="name"
-    placeholder="Your Name"
-    required
-  >
-  <input
-    type="email"
-    name="email"
-    placeholder="Your Email"
-    required
-  >
+    <!-- RIGHT SIDE: THREE.JS SMOOTH CIRCLE -->
+    <div class="globe-container">
+      <canvas id="globeCanvas"></canvas>
+    </div>
 
-   <textarea
-    name="message"
-    placeholder="Your Message"
-    required
-  ></textarea>
-    <button type="submit">Send Message</button>
-</form>
-</div>
-
-  <!-- RIGHT: EARTH -->
-<canvas id="globeCanvas"></canvas>
+  </div> <!-- End of contact-wrapper -->
 </section>
-<footer class="footer">
-  <a href="https://www.linkedin.com/in/anouar-derja/" target="_blank">
-    <i class="ph-bold ph-linkedin-logo"></i>
-  </a>
 
-  <a href="https://github.com/Anouar-Derja" target="_blank">
-    <i class="ph-bold ph-github-logo"></i>
-  </a>
+<!-- FOOTER -->
+<footer class="footer">
+ <div id="particles-js"></div>
+
+  <div class="footer-content">
+    <a href="https://www.linkedin.com/in/anouar-derja/" target="_blank">
+      <i class="ph-bold ph-linkedin-logo"></i>
+    </a>
+    <a href="https://github.com/Anouar-Derja" target="_blank">
+      <i class="ph-bold ph-github-logo"></i>
+    </a>
+  </div>
 </footer>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<script src="earth-grid.js"></script>
 
 <script>
-const canvas = document.getElementById("globeCanvas");
+tsParticles.load("particles-js", {
+  background: {
+    color: "#000000"
+  },
 
-// SCENE
-const scene = new THREE.Scene();
+  particles: {
+    number: {
+      value: 80
+    },
 
-// CAMERA
-const camera = new THREE.PerspectiveCamera(
-  45,
-  canvas.clientWidth / canvas.clientHeight,
-  0.1,
-  1000
-);
+    color: {
+      value: "#f7b500"
+    },
 
-// 👉 Perfect medium size
-camera.position.z = 2.9;
+    links: {
+      enable: true,
+      color: "#f7b500",
+      distance: 140,
+      opacity: 0.18,
+      width: 1
+    },
 
-// RENDERER
-const renderer = new THREE.WebGLRenderer({
-  canvas: canvas,
-  antialias: true,
-  alpha: true
-});
-renderer.setSize(canvas.clientWidth, canvas.clientHeight);
+    move: {
+      enable: true,
+      speed: 1
+    },
 
-// =======================
-// 🌟 THICK GOLD MATERIAL
-// =======================
-const material = new THREE.MeshBasicMaterial({
-  color: 0xffcc00
-});
+    opacity: {
+      value: 0.5
+    },
 
-// Helper → create thick tube line
-function createLine(points) {
-  const curve = new THREE.CatmullRomCurve3(points);
+    size: {
+      value: { min: 1, max: 3 }
+    }
+  },
 
-  const geometry = new THREE.TubeGeometry(
-    curve,
-    100,
-    0.015,   // 🔥 thickness (increase if needed)
-    8,
-    false
-  );
+  interactivity: {
+    events: {
+      onHover: {
+        enable: true,
+        mode: "grab"
+      }
+    },
 
-  return new THREE.Mesh(geometry, material);
-}
+    modes: {
+      grab: {
+        distance: 180,
 
-// GROUP
-const group = new THREE.Group();
-
-// =======================
-// 🔵 LATITUDE (FEWER)
-// =======================
-for (let i = -3; i <= 3; i++) {
-  const points = [];
-
-  for (let j = 0; j <= 100; j++) {
-    const theta = (j / 100) * Math.PI * 2;
-
-    const x = Math.cos(theta) * Math.cos(i * 0.4);
-    const y = Math.sin(i * 0.4);
-    const z = Math.sin(theta) * Math.cos(i * 0.4);
-
-    points.push(new THREE.Vector3(x, y, z));
+        links: {
+          opacity: 0.5
+        }
+      }
+    }
   }
-
-  group.add(createLine(points));
-}
-
-// =======================
-// 🟡 LONGITUDE (FEWER)
-// =======================
-for (let i = 0; i < 8; i++) {
-  const points = [];
-
-  for (let j = 0; j <= 100; j++) {
-    const theta = (j / 100) * Math.PI;
-
-    const x = Math.sin(theta) * Math.cos(i * Math.PI / 4);
-    const y = Math.cos(theta);
-    const z = Math.sin(theta) * Math.sin(i * Math.PI / 4);
-
-    points.push(new THREE.Vector3(x, y, z));
-  }
-
-  group.add(createLine(points));
-}
-
-// =======================
-// 🔥 SIZE (MEDIUM)
-// =======================
-group.scale.set(1.0, 1.0, 1.0);
-scene.add(group);
-
-// =======================
-// ✨ SOFT GOLD GLOW
-// =======================
-const glow = new THREE.Mesh(
-   new THREE.SphereGeometry(1.02, 32, 32), // 👈 very close to globe
-  new THREE.MeshBasicMaterial({
-    color: 0xffcc00,
-    transparent: true,
-    opacity: 0.06,
-    side: THREE.BackSide // 👈 important (wraps nicely)
-  })
-);
-glow.scale.set(1.0, 1.0, 1.0); // match group scale
-scene.add(glow);
-
-// =======================
-// 🔄 ROTATION
-// =======================
-function animate() {
-  requestAnimationFrame(animate);
-
-  group.rotation.y += 0.0025;
-
-  renderer.render(scene, camera);
-}
-
-animate();
-
-// =======================
-// 📱 RESIZE
-// =======================
-window.addEventListener("resize", () => {
-  const width = canvas.clientWidth;
-  const height = canvas.clientHeight;
-
-  renderer.setSize(width, height);
-  camera.aspect = width / height;
-  camera.updateProjectionMatrix();
 });
 </script>
+
+
 
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
@@ -559,5 +549,7 @@ form.addEventListener("submit", function(e) {
 </script>
 
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
 <script src="script.js"></script>
 </html>

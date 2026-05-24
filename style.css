@@ -18,29 +18,26 @@ body {
    overflow-x: hidden;
 }
 
-/* BLOB BACKGROUND EFFECT */
-.blob {
-  position: fixed; /* Keeps them in place while you scroll */
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, rgba(247, 181, 0, 0.15) 0%, rgba(247, 181, 0, 0) 70%);
-  filter: blur(80px);
-  border-radius: 50%;
-  z-index: -1; /* Puts them behind everything */
-  pointer-events: none; /* So you can still click things through the glow */
+/* PARTICLE BACKGROUND */
+
+#particles-js {
+position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Sits underneath the link icons */
+  pointer-events: none;
 }
 
-/* Position one in the top left */
-.blob-1 {
-  top: -100px;
-  left: -100px;
+/* KEEP CONTENT ABOVE */
+.home,
+.navbar,
+.page,
+.contact-wrapper {
+  position: relative;
+  z-index: 2;
 }
 
-/* Position one in the middle right */
-.blob-2 {
-  bottom: 10%;
-  right: -50px;
-}
 
 /* Ensure the body remains pure black so the glow pops */
 body {
@@ -145,7 +142,12 @@ body {
     letter-spacing: 1.5px;
   }
 }
-
+#globeCanvas {
+ width: 520px !important;
+  height: 520px !important;
+  display: block;
+  filter: drop-shadow(0 0 50px rgba(247, 181, 0, 0.18));
+}
 /* INTERACTION STATE */
 .nav-links li a:hover,
 .nav-links li a.active {
@@ -158,15 +160,29 @@ html {
 }
 
 .page {
-  position: relative; /* Change from absolute */
   width: 100%;
-  min-height: 100vh; /* Ensures each section takes full screen height */
-  padding: 120px 10%;
-  opacity: 1; /* Keep them visible so we can scroll to them */
-  transform: none;
-  pointer-events: auto;
-  transition: none; /* Smoothness is handled by scroll-behavior now */
-  display: block; /* Ensure they are visible */
+  min-height: 100vh; /* Every section takes up exactly 1 full screen height */
+  padding: 80px 10%; /* Top padding leaves space for your fixed navbar */
+  
+  /* 🔥 THE FLEXBOX FIX: This forces all elements inside the page (like your text blocks or grids)
+     to align perfectly dead-center on the user's monitor screen */
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important; /* Vertically center the content */
+  align-items: center !important;     /* Horizontally center the content */
+  
+  position: relative;
+  overflow: hidden;
+}
+.home,
+.about-container,
+.skills-minimal-grid,
+.timeline-container,
+.projects-grid,
+.contact-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 /* HOME */
 #home {
@@ -265,7 +281,75 @@ html {
 
   transition: 0.4s ease;
 }
+/* =========================================================================
+    ✨ ANIMATED PROFILE CARD BORDER (WHITE & YELLOW GRADIENT)
+========================================================================= */
 
+.animated-border-card {
+  position: relative;
+  width: 320px;
+  height: 426px; /* Matches the exact aspect ratio in your video */
+  background: #000000;
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Clips the rotating gradient rectangle */
+  box-shadow: 0 0 30px rgba(247, 181, 0, 0.15);
+  flex-shrink: 0; /* Prevents flexbox from squishing the card container */
+}
+
+/* 🔄 THE MOVING GRADIENT BEAM */
+.animated-border-card::before {
+  content: '';
+  position: absolute;
+  width: 150%;  
+  height: 150%;
+  /* Using the exact colors from your portfolio: White and Theme Yellow */
+  background: linear-gradient(180deg, #ffffff 0%, #f7b500 50%, #ffffff 100%);
+  animation: rotateBorderGlow 4s linear infinite;
+  z-index: 1;
+}
+
+/* 🖤 THE INNER DARK BACKDROP LAYER */
+.animated-border-card::after {
+  content: '';
+  position: absolute;
+  inset: 4px; /* Controls border thickness (4px deep framing outline) */
+  background: #050505;
+  border-radius: 20px;
+  z-index: 2;
+}
+
+/* 👤 INNER IMAGE LAYER PRIORITY */
+.animated-border-card .profile-img {
+  position: relative;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  border-radius: 20px;
+  z-index: 3; /* Places the photograph safely over the backdrops */
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+/* 🎥 SMOOTH ROTATION LOGIC */
+@keyframes rotateBorderGlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Interactive Hover Frame Scaling */
+.animated-border-card:hover {
+  box-shadow: 0 0 45px rgba(247, 181, 0, 0.4);
+}
+.animated-border-card:hover .profile-img {
+  transform: scale(1.02);
+}
 .profile-img {
   display: block;
   border-radius: 24px;
@@ -286,36 +370,132 @@ html {
   object-fit: cover;
 }
 
-
+/* =========================================================================
+   MAC-STYLE TERMINAL WINDOW COMPONENT
+========================================================================= */
 .about-text {
   flex: 1; 
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
+  width: 100%;
 }
 
-.about-text h2 {
-  font-size: 36px;
+/* WIDER COMPONENT BASE FRAME */
+.terminal-window {
+  width: 100%;
+  max-width: 720px; /* Increased from 580px to prevent string wrapping */
+  background: #050505;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  margin-bottom: 20px;
+}
+
+.terminal-header {
+  background: #0a0a0a;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+}
+
+.terminal-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.terminal-dots .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+.terminal-dots .dot.red { background: #ff5f56; }
+.terminal-dots .dot.yellow { background: #ffbd2e; }
+.terminal-dots .dot.green { background: #27c93f; }
+
+.terminal-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #666;
+  font-size: 13px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.terminal-body {
+  padding: 25px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #cccccc;
+}
+
+.terminal-body p {
   margin-bottom: 14px;
 }
-
-.about-bio {
-  max-width: 480px;
-  color: #aaa;
-  line-height: 1.7;
-  margin-bottom: 22px;
-  font-size: 15px;
+.terminal-body p:last-child {
+  margin-bottom: 0;
 }
 
-.about-info {
+.terminal-prompt {
+  color: #555556;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.highlight-text { color: #ffffff; font-weight: 600; }
+.highlight-text-yellow { color: #f7b500; font-weight: 600; }
+.info-label { color: #f7b500; font-weight: 600; }
+
+/* =========================================================================
+     COUNTER BADGES SUB-GRID LAYER
+========================================================================= */
+
+.terminal-badges {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  gap: 12px;
+  width: 100%;
+  max-width: 720px; /* Synchronized perfectly with the terminal wrapper */
+  margin-bottom: 25px;
 }
 
-.about-info strong {
-  color: #f7b500;
+.badge-card {
+  flex: 1; /* Automatically forces all 4 cards to share equal widths */
+  background: rgba(10, 14, 12, 0.7);
+  backdrop-filter: blur(8px);
+  border-radius: 8px;
+  padding: 12px 10px; /* Tightened padding to let long text breathe in line */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centered layout look */
+  gap: 8px;
+  min-width: 0; /* Prevents overflow content pushing box layout boundaries */
+}
+
+/* Yellow Borders */
+.badge-card.text-yellow { border: 1px solid rgba(247, 181, 0, 0.25); }
+.badge-card.text-yellow .badge-icon { color: #f7b500; }
+
+/* Muted Borders */
+.badge-card.text-gray { border: 1px solid rgba(255, 255, 255, 0.08); }
+.badge-card.text-gray .badge-icon { color: #555556; }
+
+.badge-icon {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+}
+
+.badge-card span {
+  color: #9da5a0;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap; /* Prevents text from slipping into linebreaks */
 }
 
 /* BUTTON */
@@ -336,19 +516,60 @@ html {
 .about-buttons {
   display: flex;
   gap: 15px;
-  margin-top: 20px;
-  flex-wrap: wrap;
-}
-.btn-outline {
-  background: transparent;
-  border: 1px solid #f7b500;
-  color: #f7b500;
-}
-.btn-outline:hover {
-  background: #f7b500;
-  color: black;
+  width: 100%;
+  max-width: 720px;
 }
 
+.about-buttons .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 46px;
+  padding: 0 24px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 600;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+.btn-primary:hover {
+  background: #ffcc00 !important;
+  border-color: #ffcc00 !important;
+  color: #000000 !important; /* Keep text pure black */
+  box-shadow: 0 0 20px rgba(247, 181, 0, 0.5);
+}
+
+/* Outline Buttons Hover (Fixes GitHub & LinkedIn) */
+.btn-outline:hover {
+  background: #f7b500 !important;
+  border-color: #f7b500 !important;
+  color: #000000 !important; /* Forces text to turn black on hover */
+  box-shadow: 0 0 20px rgba(247, 181, 0, 0.4);
+}
+.about-buttons .btn:hover .btn-icon {
+  stroke: #000000 !important;
+  fill: none; /* Keeps the SVG path background clear */
+}
+.btn-primary { background: #f7b500; color: #000; border: 2px solid #f7b500; }
+.btn-outline { background: transparent; border: 2px solid #f7b500; color: #f7b500; }
+.btn-icon { width: 15px; height: 15px; }
+
+/* RESPONSIVE RESPONSIVENESS MATRIX */
+@media (max-width: 992px) {
+  /* Wrap to 2x2 grid when the screen gets narrower before dropping to mobile mobile layouts */
+  .terminal-badges {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.btn-icon {
+  width: 16px;
+  height: 16px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
 /* SKILLS SECTION */
 .section-title {
   text-align: center;
@@ -424,10 +645,44 @@ html {
   font-weight: 700;
   letter-spacing: 1px;
 }
+#education, #projects, #skills {
+  position: relative;
+  /* Reduced from 140px to give a tight, crisp space underneath the navbar */
+  padding-top: 100px !important; 
+  padding-bottom: 100px !important;
+}
 
-
+#education {
+  position: relative;
+  padding-top: 140px !important; /* Forces a safe zone for the fixed navbar to sit over */
+  padding-bottom: 100px;
+}
 /* PROJECTS */
+#projects {
+  position: relative !important;
+  /* Gives the particles space to actually fade out without hitting the card borders */
+  padding-bottom: 160px !important;
+}
 
+/* This adds a smooth fade to black over the bottom 150px of the section */
+#projects::after {
+ content: '' !important;
+  position: absolute !important;
+  bottom: -2px !important; /* Forces it to sit slightly lower, overlapping the section slit */
+  left: 0 !important;
+  width: 100% !important;
+  height: 250px !important; /* Made taller for a incredibly smooth, slow blend to black */
+  
+  /* Graduating seamlessly from pure transparent to flat solid black */
+  background: linear-gradient(to bottom, 
+    rgba(0, 0, 0, 0) 0%, 
+    rgba(0, 0, 0, 0.5) 40%, 
+    rgba(0, 0, 0, 1) 100%
+  ) !important;
+  
+  pointer-events: none !important;
+  z-index: 999 !important; /* High layer priority to force it ABOVE the fixed background particles */
+}
 /* GRID LAYOUT */
 .projects-grid {
   display: grid;
@@ -563,26 +818,27 @@ html {
 
 /* Background Bar (Empty) */
 .timeline-line-bg {
-  position: absolute;
+position: absolute;
   left: 50%;
   transform: translateX(-50%);
   width: 2px;
   height: 100%;
-  background: #1a1a1a; /* Very dark gray/black */
+  background: rgba(255, 255, 255, 0.08); /* Slightly visible gray so the path is apparent */
   z-index: 1;
 }
 
 /* Filling Bar (Yellow) */
 .timeline-line-fill {
-  position: absolute;
+ position: absolute;
   left: 50%;
   transform: translateX(-50%);
   width: 2px;
-  height: 0%; /* Initial height */
+  height: 0%; /* Dynamic height calculated by JS */
   background: #f7b500;
-  box-shadow: 0 0 15px rgba(247, 181, 0, 0.5);
+  box-shadow: 0 0 15px rgba(247, 181, 0, 0.6), 
+              0 0 30px rgba(247, 181, 0, 0.3); /* Adds that radiant glow effect */
   z-index: 2;
-  transition: height 0.1s linear;
+  transition: height 0.05s linear;
 }
 
 .timeline-item {
@@ -639,18 +895,37 @@ transform: translateX(-50%) translateY(-4px);
 
 /* Dot on the line */
 .timeline-dot {
-  position: absolute;
+ position: absolute;
   left: 50%;
-  transform: translateX(-50%);
-  width: 12px;
-  height: 12px;
-  background: #000;
-  border: 2px solid #1a1a1a;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 14px;
+  height: 14px;
+  background: #111;              /* Dark inside like photo/video */
+  border: 2px solid #333;        /* Dim border */
   border-radius: 50%;
-  z-index: 3;
-  transition: all 0.4s ease;
+  z-index: 5;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.timeline-item.dot-active .timeline-dot {
+  background: #f7b500;           /* Vibrant Yellow Center */
+  border-color: #ffffff;         /* Crisp White Edge Core */
+  box-shadow: 
+    0 0 10px #f7b500,            /* Sharp inner glow */
+    0 0 25px #f7b500,            /* Deep radiant atmospheric glow */
+    0 0 45px rgba(247, 181, 0, 0.6);
 }
 
+/* Optional Card Highlight when active */
+.timeline-item.dot-active .timeline-content {
+  border-color: rgba(247, 181, 0, 0.3);
+  box-shadow: 0 0 20px rgba(247, 181, 0, 0.05);
+}
+
+/* Maintain crisp desktop hover state override */
+.timeline-item:hover .timeline-dot {
+  transform: translate(-50%, -50%) scale(1.2);
+}
 /* Logic for Left/Right Staggering */
 .timeline-item.left { flex-direction: row; }
 .timeline-item.left .timeline-content { text-align: right; }
@@ -772,13 +1047,15 @@ footer {
 }
 
 .contact-modern {
-   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 100px 20px;
-
+  width: 100%;
   min-height: 100vh;
-  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 10%;
+  background: #000000; /* Pure black backdrop like photo 2 */
+  position: relative;
+  z-index: 2;
 }
 
 /* Card */
@@ -819,9 +1096,10 @@ footer {
 
 /* Subtitle */
 .contact-card h4 {
-   color: #ccc;
-  margin-bottom: 20px;
-  font-weight: 400;
+  color: #aaaaaa;
+  font-size: 16px;
+  margin-bottom: 25px;
+  letter-spacing: 0.5px;
  
 }
 
@@ -872,40 +1150,41 @@ footer {
   background: #ffcc00;
   box-shadow: 0 0 15px rgba(255, 204, 0, 0.6);
 }
-/* 🌍 EARTH */
-.earth-container {
-     width: 420px;
-  height: 420px;
 
+
+.contact-card {
+  flex: 0 0 450px;
+  background: rgba(5, 5, 5, 0.75); /* Added transparency for a glassy finish */
+  backdrop-filter: blur(8px);
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px solid rgba(247, 181, 0, 0.25);
+  box-shadow: 0 0 40px rgba(247, 181, 0, 0.08);
+}
+.globe-container {
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-
-  position: relative
+  padding-left: 20px;
 }
-
 /* Button hover */
 .contact-form-modern button:hover {
   background: #ffcc00;
   transform: translateY(-2px);
 }
-/* RIGHT 3D */
-.contact-3d {
-    flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 
 .contact-wrapper {
 display: flex;
-  justify-content: space-between; /* Pushes items to opposite sides */
+  justify-content: space-between;
   align-items: center;
+  gap: 80px; /* Increased padding gap to keep components separated */
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 80px 5%;
-  min-height: 100vh;
-  gap: 40px;
+  position: relative;
+  z-index: 2;
 }
 
 .contact-form {
@@ -929,44 +1208,39 @@ canvas {
   z-index: -1;
 }
 
-#globeCanvas {
-  width: 320px !important;
-  height: 320px !important;
 
-  display: block;
-
-  background: transparent;
-
-  /* REMOVE THIS */
-  border-radius: 0;
-
-  object-fit: contain;
-}
 /* container */
-.contact-3d-canvas,
-.earth-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
-  width: 100%;
-}
 .footer {
+width: 100%;
+  padding: 40px 0;
+  background: #000000;
+  
+  /* The crisp white section divider line */
+  border-top: 1px solid rgba(255, 255, 255, 0.12); 
+  
+  /* 🔥 Traps the animation canvas frame tightly inside the footer element box */
+  position: relative; 
+  overflow: hidden; 
+  z-index: 10;
+}
+.footer-content {
+position: relative;
+  z-index: 5;
   display: flex;
   justify-content: center;
   gap: 30px;
-  padding: 20px 0;
-  margin-top: 60px;
 }
 
 .footer a {
-  font-size: 32px;
-  color: #f7b500; /* 🔥 yellow */
-  transition: 0.3s ease;
+font-size: 32px;
+  color: #f7b500;
+  transition: transform 0.3s ease, color 0.3s ease;
+  display: inline-block;
 }
 
 .footer a:hover {
-  color: #ffffff;
+color: #ffffff;
   transform: scale(1.2);
 }
 @media (max-width: 1024px) {
@@ -990,6 +1264,10 @@ canvas {
   .logo {
     font-size: 16px;
   }
+  .animated-border-card {
+    width: 280px;
+    height: 373px; /* Proportionally scales the card container framework */
+  }
 
 }
 
@@ -1001,15 +1279,17 @@ canvas {
   .contact-wrapper {
     flex-direction: column;
     text-align: center;
-    padding-top: 150px;
+    gap: 40px;
   }
-  
   .contact-card {
-    flex: 1 1 auto;
+   flex: 1 1 auto;
     width: 100%;
     max-width: 450px;
   }
- 
+ #globeCanvas {
+    width: 350px !important;
+    height: 350px !important;
+  }
 
 }
 
@@ -1104,10 +1384,7 @@ canvas {
     text-align: center;
   }
 
-  .about-text {
-    align-items: center;
-    text-align: center;
-  }
+
 
   /* SKILLS */
   .skills-grid {
@@ -1181,10 +1458,7 @@ canvas {
     margin-bottom: 50px;
     width: calc(100% - 40px);
   }
- #globeCanvas {
-    width: 220px !important;
-    height: 220px !important;
-  }
+
   /* CARD */
   .timeline-content {
     width: 100%;
@@ -1285,8 +1559,18 @@ canvas {
   }
 
 
-    .earth-container {
-    max-width: 300px;
+  .terminal-window, .terminal-badges {
+    max-width: 100%;
+  }
+  .terminal-badges {
+   grid-template-columns: 1fr;
+  }
+  .terminal-badges, .about-buttons {
+    max-width: 100%;
+  }
+  .terminal-body {
+    font-size: 14px;
+    padding: 20px;
   }
 
   .about-buttons {
@@ -1297,8 +1581,7 @@ canvas {
   }
 
   .about-buttons .btn {
-    flex: 1 1 auto;
-    text-align: center;
+    flex: 1 1 100%;
   }
 
 }
@@ -1370,8 +1653,6 @@ canvas {
   .timeline-line-fill {
     left: 14px;
   }
-  .earth-container {
-    max-width: 240px;
-  }
+
  
 }
