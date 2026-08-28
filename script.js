@@ -177,7 +177,7 @@ function typeEffect() {
 typeEffect();
 
 /* =========================================================================
-   🔥 THREE.JS CORE: SILKY SMOOTH MOUSE-ILLUMINATED FIELD
+    THREE.JS CORE: SILKY SMOOTH MOUSE-ILLUMINATED FIELD
 ========================================================================= */
 const SimplexNoise = function() {
   const F3 = 1.0 / 3.0, G3 = 1.0 / 6.0;
@@ -276,7 +276,7 @@ if (canvas) {
   };
 
   const particlesMaterial = new THREE.PointsMaterial({
-    color: 0xf7b500,
+    color: 0x8b5cf6,
     size: 0.022, 
     transparent: true,
     opacity: 0.75,
@@ -336,4 +336,5 @@ if (canvas) {
     camera.updateProjectionMatrix();
     renderer.setSize(canvas.clientWidth, canvas.clientHeight);
   });
+  
 }
