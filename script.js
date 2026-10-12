@@ -239,7 +239,7 @@ if (canvas) {
   });
 
   const particlesGeometry = new THREE.BufferGeometry();
-  const particlesCount = 5000;
+  const particlesCount = 1800;
   const positions = new Float32Array(particlesCount * 3);
   const baseDirections = new Float32Array(particlesCount * 3);
 
@@ -688,3 +688,154 @@ pinkLight.position.y =
 
   animate();
 })();
+/* =========================================================
+   CONTINUOUS DEEP SPACE — ABOUT → PROJECTS
+   ========================================================= */
+
+function positionDeepSpaceBackground() {
+  const layer = document.getElementById("deep-space-background");
+  const about = document.getElementById("about");
+  const projects = document.getElementById("projects");
+
+  if (!layer || !about || !projects) return;
+
+  const start = about.getBoundingClientRect().top + window.scrollY;
+  const end = projects.getBoundingClientRect().bottom + window.scrollY;
+  const height = Math.max(0, end - start);
+
+  layer.style.top = `${start}px`;
+  layer.style.height = `${height}px`;
+}
+
+function scheduleDeepSpacePosition() {
+  requestAnimationFrame(() => {
+    requestAnimationFrame(positionDeepSpaceBackground);
+  });
+}
+
+scheduleDeepSpacePosition();
+window.addEventListener("load", scheduleDeepSpacePosition);
+window.addEventListener("resize", scheduleDeepSpacePosition);
+
+if (typeof ResizeObserver !== "undefined") {
+  const deepSpaceObserver = new ResizeObserver(scheduleDeepSpacePosition);
+  const aboutSection = document.getElementById("about");
+  const skillsSection = document.getElementById("skills");
+  const educationSection = document.getElementById("education");
+  const projectsSection = document.getElementById("projects");
+
+  [aboutSection, skillsSection, educationSection, projectsSection]
+    .filter(Boolean)
+    .forEach(section => deepSpaceObserver.observe(section));
+}
+
+/* Actual star field used only by the About → Projects layer. */
+function initDeepSpaceParticles() {
+  const container = document.getElementById("deep-space-particles");
+
+  if (!container || typeof tsParticles === "undefined") return;
+
+  tsParticles.load("deep-space-particles", {
+    fullScreen: {
+      enable: false
+    },
+
+    background: {
+      color: "transparent"
+    },
+
+    particles: {
+     number: {
+    value: 55,
+    density: {
+        enable: true,
+        area: 1400
+    }
+},
+
+      color: {
+        value: [
+          "#ffffff",
+          "#c4b5fd",
+          "#a78bfa",
+          "#8b5cf6"
+        ]
+      },
+
+      shape: {
+        type: "circle"
+      },
+
+      opacity: {
+        value: {
+          min: 0.16,
+          max: 0.58
+        },
+        animation: {
+          enable: true,
+          speed: 0.25,
+          minimumValue: 0.08,
+          sync: false
+        }
+      },
+
+      size: {
+        value: {
+          min: 1,
+          max: 2.6
+        },
+        animation: {
+          enable: true,
+          speed: 0.45,
+          minimumValue: 0.7,
+          sync: false
+        }
+      },
+
+      move: {
+        enable: true,
+        speed: 0.18,
+        direction: "none",
+        random: true,
+        straight: false,
+        outModes: {
+          default: "bounce"
+        }
+      },
+
+      links: {
+        enable: false,
+        distance: 145,
+        color: "#8b5cf6",
+        opacity: 0.085,
+        width: 1
+      }
+    },
+
+    interactivity: {
+      detectsOn: "window",
+      events: {
+        onHover: {
+          enable: false,
+          mode: "grab"
+        },
+        resize: {
+          enable: true
+        }
+      },
+      modes: {
+        grab: {
+          distance: 170,
+          links: {
+            opacity: 0.24
+          }
+        }
+      }
+    },
+
+    detectRetina: true
+  });
+}
+
+initDeepSpaceParticles();
+

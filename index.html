@@ -37,7 +37,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<div id="particles-js"></div>
+
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
 
@@ -140,16 +140,14 @@
     </div>
   </div>
 </section>
-<!-- ABOUT TRANSITION / PLEXUS BACKGROUND -->
-<div class="about-transition">
-    <div class="transition-gradient"></div>
-    <div id="about-plexus"></div>
+
+
+<div id="deep-space-background">
+    <div id="deep-space-particles"></div>
 </div>
-
-
-
 <!-- ABOUT -->
 <section id="about" class="page">
+  
   <div class="about-container">
 
     <!-- PROFILE -->
@@ -335,529 +333,210 @@
 
   </div>
 </section>
+<script type="importmap">
 
+</script>
 
+  
 
-<!-- =========================================================
-     SKILLS
-     ========================================================= -->
+<!-- SKILLS SECTION -->
 <section id="skills" class="page skills-section">
 
-  <div class="skills-heading reveal">
+  <!-- CENTERED TITLE -->
+  <header class="skills-header reveal">
 
 
-    <h2 class="section-title">
-      Skills & <span>Expertise</span>
+    <h2 class="skills-title">
+      Skills &amp; <span>Expertise</span>
     </h2>
 
-    <p class="section-subtitle">
-      Technologies and engineering principles I use to build secure,
-      scalable, and maintainable applications.
+    <p class="skills-description">
+      Technologies and engineering principles I use to build
+      secure, scalable, and maintainable applications.
     </p>
+  </header>
+
+  <div class="skills-content">
+
+    <!-- LEFT: PROGRESS BARS -->
+    <div class="skills-progress-panel reveal">
+
+      <div class="progress-heading">
+        <span class="progress-heading-dot"></span>
+        <h3>Areas of Focus</h3>
+      </div>
+      <div class="proficiency-heading">
+  <h4>Proficiency</h4>
+</div>
+
+      <div class="progress-item">
+        <div class="progress-label">
+          <span>Backend Development</span>
+          <span>90%</span>
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill" style="--progress: 90%"></div>
+        </div>
+      </div>
+
+      <div class="progress-item">
+        <div class="progress-label">
+          <span>Frontend / Design</span>
+          <span>50%</span>
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill" style="--progress: 50%"></div>
+        </div>
+      </div>
+
+      <div class="progress-item">
+        <div class="progress-label">
+          <span>Programming &amp; Algorithms</span>
+          <span>70%</span>
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill" style="--progress: 70%"></div>
+        </div>
+      </div>
+
+      <div class="progress-note">
+        <span class="skills-bottom-dot"></span>
+        Focused on clean code, testing, and reliable backend systems.
+      </div>
+
+    </div>
+
+    <!-- RIGHT: TECHNOLOGIES & TOOLS -->
+    <div class="skills-panel reveal">
+
+      <div class="skills-grid-heading">
+        <h3>Technologies &amp; Tools</h3>
+        <span>MY STACK</span>
+      </div>
+
+      <div class="skills-logo-grid">
+
+        <!-- BACKEND -->
+        <div class="skill-logo-item">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" alt="C#">
+          <span>C# & OOP</span>
+        </div>
+
+        <div class="skill-logo-item">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dotnetcore/dotnetcore-original.svg" alt=".NET">
+          <span>.NET</span>
+        </div>
+
+        <div class="skill-logo-item">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original.svg" alt="SQL Server">
+          <span>SQL & T-SQL</span>
+        </div>
+
+        <div class="skill-logo-item">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/entityframeworkcore/entityframeworkcore-original.svg" alt="Entity Framework Core">
+          <span>EF Core</span>
+        </div>
+
+        <!-- API & TESTING -->
+        <div class="skill-logo-item">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/swagger/swagger-original.svg" alt="Swagger">
+          <span>Swagger</span>
+        </div>
+
+        <div class="skill-logo-item">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg" alt="Postman">
+          <span>Postman</span>
+        </div>
+
+        <div class="skill-logo-item">
+          <img src="https://jwt.io/img/pic_logo.svg" alt="JWT">
+          <span>JWT</span>
+        </div>
+
+        <div class="skill-logo-item">
+          <img src="images/logos/xunit.jpg" alt="xUnit">
+          <span>xUnit</span>
+        </div>
+
+        <div class="skill-logo-item">
+          <img src="images/logos/moq.svg" alt="Moq">
+          <span>Moq</span>
+        </div>
+
+        <div class="skill-logo-item">
+          <img src="images/logos/rest-api.png" alt="REST APIs">
+          <span>REST APIs</span>
+        </div>
+
+        <!-- SOFTWARE ENGINEERING -->
+        <div class="skill-logo-item">
+          <img src="images/logos/solid-principles.png" alt="SOLID Principles">
+          <span>SOLID Principles</span>
+        </div>
+
+        <div class="skill-logo-item">
+          <img src="images/logos/clean-architecture.png" alt="Clean Architecture">
+          <span>Clean Architecture</span>
+        </div>
+
+        <div class="skill-logo-item">
+          <img src="images/logos/3-tier-architecture.png" alt="3-Tier Architecture">
+          <span>3-Tier Architecture</span>
+        </div>
+
+        <div class="skill-logo-item">
+          <img src="images/logos/data-structures.png" alt="Data Structures">
+          <span>Data Structures</span>
+        </div>
+
+        <!-- FRONTEND & TOOLS -->
+        <div class="skill-logo-item">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React">
+          <span>React</span>
+        </div>
+
+        <div class="skill-logo-item">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript">
+          <span>JavaScript</span>
+        </div>
+
+        <div class="skill-logo-item">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML5">
+          <span>HTML5</span>
+        </div>
+
+        <div class="skill-logo-item">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS3">
+          <span>CSS3</span>
+        </div>
+
+        <div class="skill-logo-item">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git">
+          <span>Git / GitHub</span>
+        </div>
+
+        <div class="skill-logo-item">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" alt="C++">
+          <span>C++ / Algorithms</span>
+        </div>
+
+      </div>
+    </div>
   </div>
-
-  <div class="skills-grid">
-
-    <!-- =====================================================
-         FEATURED .NET
-         ===================================================== -->
-    <article class="skill-card skill-featured reveal">
-
-      <div class="skill-card-top">
-        <div class="skill-icon featured-icon">
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dotnetcore/dotnetcore-original.svg"
-            alt=".NET Core"
-          >
-        </div>
-
-        <span class="skill-status">
-          <i></i> ADVANCED
-        </span>
-      </div>
-
-      <div class="skill-card-content">
-
-        <h3>.NET Core</h3>
-
-        <p>
-          Building secure and scalable backend systems, REST APIs,
-          authentication flows, and production-style architectures.
-        </p>
-      </div>
-
-      <div class="skill-tags">
-        <span>ASP.NET Core</span>
-        <span>Web API</span>
-        <span>Backend</span>
-      </div>
-
-    </article>
-
-
-    <!-- =====================================================
-         C#
-         ===================================================== -->
-    <article class="skill-card reveal">
-
-      <div class="skill-card-top">
-        <div class="skill-icon">
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg"
-            alt="C#"
-          >
-        </div>
-
-        <span class="skill-status">
-          <i></i> ADVANCED
-        </span>
-      </div>
-
-      <h3>C# & OOP</h3>
-
-      <p>
-        Object-oriented programming, clean code, reusable components,
-        and backend application development.
-      </p>
-
-    </article>
-
-
-    <!-- =====================================================
-         SQL
-         ===================================================== -->
-    <article class="skill-card reveal">
-
-      <div class="skill-card-top">
-        <div class="skill-icon">
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg"
-            alt="SQL Server"
-          >
-        </div>
-
-        <span class="skill-status">
-          <i></i> ADVANCED
-        </span>
-      </div>
-
-      <h3>SQL & T-SQL</h3>
-
-      <p>
-        Database design, queries, relationships, stored procedures,
-        and efficient data management.
-      </p>
-
-    </article>
-
-
-    <!-- =====================================================
-         REST API
-         ===================================================== -->
-    <article class="skill-card reveal">
-
-      <div class="skill-card-top">
-        <div class="skill-icon skill-icon-symbol">
-          <i class="ph-bold ph-plugs-connected"></i>
-        </div>
-
-        <span class="skill-status">
-          <i></i> ADVANCED
-        </span>
-      </div>
-
-      <h3>REST APIs</h3>
-
-      <p>
-        Designing structured APIs with authentication, validation,
-        business logic, and clean endpoint architecture.
-      </p>
-
-    </article>
-
-
-    <!-- =====================================================
-         ENTITY FRAMEWORK
-         ===================================================== -->
-    <article class="skill-card reveal">
-
-      <div class="skill-card-top">
-        <div class="skill-icon">
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/entityframeworkcore/entityframeworkcore-original.svg"
-            alt="Entity Framework Core"
-          >
-        </div>
-
-        <span class="skill-status">
-          <i></i> ADVANCED
-        </span>
-      </div>
-
-      <h3>Entity Framework</h3>
-
-      <p>
-        ORM-based database development, migrations, relationships,
-        LINQ, and data access with EF Core.
-      </p>
-
-    </article>
-
-
-    <!-- =====================================================
-         JWT
-         ===================================================== -->
-    <article class="skill-card reveal">
-
-      <div class="skill-card-top">
-        <div class="skill-icon">
-          <img
-            src="https://jwt.io/img/pic_logo.svg"
-            alt="JWT"
-          >
-        </div>
-
-        <span class="skill-status intermediate">
-          <i></i> INTERMEDIATE
-        </span>
-      </div>
-
-      <h3>JWT Authentication</h3>
-
-      <p>
-        Token-based authentication, protected API endpoints,
-        authorization, and role-based security.
-      </p>
-
-    </article>
-
-
-    <!-- =====================================================
-         CLEAN ARCHITECTURE
-         ===================================================== -->
-    <article class="skill-card reveal">
-
-      <div class="skill-card-top">
-        <div class="skill-icon skill-icon-symbol">
-          <i class="ph-bold ph-stack"></i>
-        </div>
-
-        <span class="skill-status">
-          <i></i> ADVANCED
-        </span>
-      </div>
-
-      <h3>Clean Architecture</h3>
-
-      <p>
-        Separation of concerns, dependency inversion, maintainable
-        application structure, and layered design.
-      </p>
-
-    </article>
-
-
-    <!-- =====================================================
-         SOLID
-         ===================================================== -->
-    <article class="skill-card reveal">
-
-      <div class="skill-card-top">
-        <div class="skill-icon skill-icon-symbol">
-          <i class="ph-bold ph-circles-three-plus"></i>
-        </div>
-
-        <span class="skill-status">
-          <i></i> ADVANCED
-        </span>
-      </div>
-      <h3>SOLID Principles</h3>
-
-      <p>
-        Applying object-oriented design principles to create
-        flexible, understandable, and maintainable code.
-      </p>
-
-    </article>
-
-
-    <!-- =====================================================
-         REACT
-         ===================================================== -->
-    <article class="skill-card reveal">
-
-      <div class="skill-card-top">
-        <div class="skill-icon">
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
-            alt="React"
-          >
-        </div>
-
-        <span class="skill-status intermediate">
-          <i></i> INTERMEDIATE
-        </span>
-      </div>
-
-      <h3>React</h3>
-
-      <p>
-        Component-based frontend development, hooks, state
-        management, API integration, and responsive interfaces.
-      </p>
-
-    </article>
-
-
-    <!-- =====================================================
-         JAVASCRIPT
-         ===================================================== -->
-    <article class="skill-card reveal">
-
-      <div class="skill-card-top">
-        <div class="skill-icon">
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
-            alt="JavaScript"
-          >
-        </div>
-
-        <span class="skill-status intermediate">
-          <i></i> INTERMEDIATE
-        </span>
-      </div>
-
-      <h3>JavaScript</h3>
-
-      <p>
-        Modern JavaScript, DOM manipulation, asynchronous logic,
-        API communication, and interactive interfaces.
-      </p>
-
-    </article>
-
-
-    <!-- =====================================================
-         HTML
-         ===================================================== -->
-    <article class="skill-card reveal">
-
-      <div class="skill-card-top">
-        <div class="skill-icon">
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
-            alt="HTML5"
-          >
-        </div>
-
-        <span class="skill-status intermediate">
-          <i></i> INTERMEDIATE
-        </span>
-      </div>
-
-      <h3>HTML5</h3>
-
-      <p>
-        Semantic markup, accessible structure, forms, and
-        modern web page architecture.
-      </p>
-
-    </article>
-
-
-    <!-- =====================================================
-         CSS
-         ===================================================== -->
-    <article class="skill-card reveal">
-
-      <div class="skill-card-top">
-        <div class="skill-icon">
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
-            alt="CSS3"
-          >
-        </div>
-
-        <span class="skill-status intermediate">
-          <i></i> INTERMEDIATE
-        </span>
-      </div>
-
-      <h3>CSS3</h3>
-
-      <p>
-        Responsive layouts, animations, modern UI systems,
-        glassmorphism, and mobile-first design.
-      </p>
-
-    </article>
-
-
-    <!-- =====================================================
-         GITHUB
-         ===================================================== -->
-    <article class="skill-card reveal">
-
-      <div class="skill-card-top">
-        <div class="skill-icon">
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
-            alt="Git"
-          >
-        </div>
-
-        <span class="skill-status">
-          <i></i> ADVANCED
-        </span>
-      </div>
-
-      <h3>Git & GitHub</h3>
-
-      <p>
-        Version control, branching, repository management,
-        collaboration, and project deployment workflows.
-      </p>
-
-    </article>
-
-
-    <!-- =====================================================
-         SWAGGER
-         ===================================================== -->
-    <article class="skill-card reveal">
-
-      <div class="skill-card-top">
-        <div class="skill-icon skill-icon-symbol">
-          <i class="ph-bold ph-file-code"></i>
-        </div>
-
-        <span class="skill-status intermediate">
-          <i></i> INTERMEDIATE
-        </span>
-      </div>
-
-      <h3>Swagger</h3>
-
-      <p>
-        API documentation, endpoint testing, request schemas,
-        and backend API exploration.
-      </p>
-
-    </article>
-
-
-    <!-- =====================================================
-         POSTMAN
-         ===================================================== -->
-    <article class="skill-card reveal">
-
-      <div class="skill-card-top">
-        <div class="skill-icon skill-icon-symbol">
-          <i class="ph-bold ph-paper-plane-tilt"></i>
-        </div>
-
-        <span class="skill-status intermediate">
-          <i></i> INTERMEDIATE
-        </span>
-      </div>
-
-      <h3>Postman</h3>
-
-      <p>
-        API testing, request collections, authentication testing,
-        and backend debugging.
-      </p>
-
-    </article>
-
-
-    <!-- =====================================================
-         DATA STRUCTURES
-         ===================================================== -->
-    <article class="skill-card reveal">
-
-      <div class="skill-card-top">
-        <div class="skill-icon skill-icon-symbol">
-          <i class="ph-bold ph-tree-structure"></i>
-        </div>
-
-        <span class="skill-status">
-          <i></i> ADVANCED
-        </span>
-      </div>
-
-
-      <h3>Data Structures</h3>
-
-      <p>
-        Core data structures, algorithms, complexity,
-        and problem-solving techniques.
-      </p>
-
-    </article>
-
-
-    <!-- =====================================================
-         C++
-         ===================================================== -->
-    <article class="skill-card skill-secondary reveal">
-
-      <div class="skill-card-top">
-        <div class="skill-icon">
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg"
-            alt="C++"
-          >
-        </div>
-
-        <span class="skill-status">
-          <i></i> ADVANCED
-        </span>
-      </div>
-
-      <h3>C++ & Algorithms</h3>
-
-      <p>
-        Programming fundamentals, algorithms, object-oriented
-        concepts, and problem solving.
-      </p>
-
-    </article>
-
-
-    <!-- =====================================================
-         3-TIER
-         ===================================================== -->
-    <article class="skill-card skill-secondary reveal">
-
-      <div class="skill-card-top">
-        <div class="skill-icon skill-icon-symbol">
-          <i class="ph-bold ph-stack-simple"></i>
-        </div>
-
-        <span class="skill-status intermediate">
-          <i></i> INTERMEDIATE
-        </span>
-      </div>
-
-      <h3>3-Tier Architecture</h3>
-
-      <p>
-        Structured application layers for presentation,
-        business logic, and data access.
-      </p>
-
-    </article>
-
-  </div>
-
 </section>
+
+
 
 <!-- Education -->
 <section id="education" class="page">
   
-  <h2 class="section-title">Education & Experience</h2>
-  
+  <h2 class="section-title education-title">
+  Education &amp; <span>Experience</span>
+</h2>
+  <p class="section-description">
+  My learning journey, technical growth, and experience building
+  projects that strengthen my software development skills.
+</p>
   <div class="timeline-container">
     <!-- The Progress Bar -->
     <div class="timeline-line-bg"></div>
@@ -871,7 +550,7 @@
         <p class="location">Al Khawarizmi | Safi, Morocco</p>
         <p>Electrical Engineering</p>
       </div>
-      <div class="timeline-year">2022</div>
+      <div class="timeline-year">2023</div>
       <div class="timeline-dot"></div>
     </div>
 
@@ -883,7 +562,7 @@
         <p class="location">Merch by Amazon (Freelance)</p>
         <p>Created original designs for print-on-demand products. Creativity, Visual Communication, Trends.</p>
       </div>
-      <div class="timeline-year">2023</div>
+      <div class="timeline-year">2024</div>
       <div class="timeline-dot"></div>
     </div>
 
@@ -895,266 +574,623 @@
         <p class="location">Programming Advices</p>
         <p>Building scalable backend systems with a focus on clean architecture, APIs, and performance.</p>
       </div>
-      <div class="timeline-year">2024 - Present</div>
+      <div class="timeline-year">2025 - Present</div>
       <div class="timeline-dot"></div>
     </div>
   </div>
 </section>
 
+<!-- =========================================================
+     PROJECTS SECTION
+     ========================================================= -->
 
-<!-- PROJECTS SECTION -->
-<section id="projects" class="page">
-  <h2 class="section-title">Projects</h2>
-  <p class="section-subtitle">
-    Selected projects demonstrating real business logic, clean architecture,
-    and production-style system design.
-  </p>
+<section id="projects" class="projects-section">
 
-  <div class="projects-grid">
+    <!-- HEADER -->
+    <div class="projects-header">
 
-  
-    <!-- Project 01: CARVIA -->
-    <div class="project-card reveal">
-      <div class="project-content-inner">
+      
 
-        <div class="project-header">
-          <span class="project-icon">
-            <i class="ph-bold ph-car"></i>
-          </span>
-          <h3>CARVIA</h3>
-        </div>
+        <h2 class="section-title education-title">
+            Featured <span>Projects</span>
+        </h2>
 
-        <p class="project-desc">
-          Car rental and management platform focused on real-world business
-          workflows, vehicle management, reservations, authentication,
-          and structured application architecture.
+        <p class="section-subtitle">
+            Selected projects demonstrating real business logic,
+            clean architecture, and production-style system design.
         </p>
 
-        <div class="project-tech">
-          <strong>TECH:</strong> C#, .NET CORE, SQL, API, REACT ,JWT
-        </div>
-
-        <div class="project-screenshot">
-          <img
-            src="carvia-preview.png"
-            alt="CARVIA Project Screenshot"
-          >
-        </div>
-
-        <a
-          href="https://github.com/Anouar-Derja/CARVIA"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="project-btn"
-        >
-          View on GitHub
-        </a>
-
-      </div>
     </div>
 
 
-    <!-- Project 02: Bank Management System -->
-    <div class="project-card reveal">
-      <div class="project-content-inner">
+    <!-- =====================================================
+         PROJECT 01 — CARVIA
+         ===================================================== -->
 
-        <div class="project-header">
-          <span class="project-icon">
-            <i class="ph-bold ph-bank"></i>
-          </span>
-          <h3>Bank Management System</h3>
+    <article class="featured-project reveal">
+
+        <div class="featured-project-info">
+
+            <span class="featured-project-number">
+                01
+            </span>
+
+            <span class="featured-project-label">
+                Full-Stack Development
+            </span>
+
+            <h3>
+                CARVIA -
+                <span>Car Rental Platform</span>
+            </h3>
+
+            <div class="featured-description">
+
+                <p>
+                    Car rental and management platform focused on
+                    real-world business workflows, vehicle management,
+                    reservations, authentication, and structured
+                    application architecture.
+                </p>
+
+                <p>
+                    Built with React and ASP.NET Core with SQL Server,
+                    Entity Framework Core, and JWT authentication.
+                </p>
+
+            </div>
+
+            <div class="featured-tech">
+
+                <span>C#</span>
+                <span>.NET Core</span>
+                <span>ASP.NET Core</span>
+                <span>SQL Server</span>
+                <span>EF Core</span>
+                <span>React</span>
+                <span>JWT</span>
+
+            </div>
+
+            <a
+                href="https://github.com/Anouar-Derja/CARVIA"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="featured-project-btn"
+            >
+                View on GitHub
+                <i class="ph-bold ph-arrow-up-right"></i>
+            </a>
+
         </div>
 
-        <p class="project-desc">
-          Full desktop banking system implementing real-world business logic,
-          secure authentication, account management, and data integrity using
-          a clean 3-Tier architecture.
-        </p>
 
-        <div class="project-tech">
-          <strong>TECH:</strong> C#, SQL, OOP, 3-TIER ARCHITECTURE
+        <div class="featured-project-visual">
+
+            <div class="project-image-frame">
+
+                <img
+                    src="carvia-preview.png"
+                    alt="CARVIA Project Screenshot"
+                >
+
+                <div class="project-image-glow"></div>
+
+            </div>
+
+            <div class="project-floating-card">
+
+                <div class="floating-card-top">
+
+                    <span class="floating-dot"></span>
+
+                    <span>CARVIA</span>
+
+                    <span class="floating-status">
+                        FULL STACK
+                    </span>
+
+                </div>
+
+                <p>
+                    Car rental platform with vehicle search,
+                    authentication, reservations, and responsive UI.
+                </p>
+
+            </div>
+
         </div>
 
-        <div class="project-screenshot">
-          <img
-            src="bank-system-preview.png"
-            alt="Bank Management System Screenshot"
-          >
+    </article>
+
+
+    <!-- =====================================================
+         PROJECT 02 — BANK MANAGEMENT SYSTEM
+         ===================================================== -->
+
+    <article class="featured-project featured-project-reverse reveal">
+
+        <div class="featured-project-visual">
+
+            <div class="project-image-frame">
+
+                <img
+                    src="bank-system-preview.png"
+                    alt="Bank Management System Screenshot"
+                >
+
+                <div class="project-image-glow"></div>
+
+            </div>
+
+            <div class="project-floating-card">
+
+                <div class="floating-card-top">
+
+                    <span class="floating-dot"></span>
+
+                    <span>BANK SYSTEM</span>
+
+                    <span class="floating-status">
+                        DESKTOP
+                    </span>
+
+                </div>
+
+                <p>
+                    Banking application implementing authentication,
+                    account management, and real-world business logic.
+                </p>
+
+            </div>
+
         </div>
 
-        <a
-          href="https://github.com/Anouar-Derja/PrBank-Management-System"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="project-btn"
-        >
-          View on GitHub
-        </a>
 
-      </div>
-    </div>
+        <div class="featured-project-info">
 
+            <span class="featured-project-number">
+                02
+            </span>
 
-    <!-- Project 03: DVLD Management System -->
-    <div class="project-card reveal">
-      <div class="project-content-inner">
+            <span class="featured-project-label">
+                Desktop Application
+            </span>
 
-        <div class="project-header">
-          <span class="project-icon">
-            <i class="ph-bold ph-identification-card"></i>
-          </span>
-          <h3>DVLD Management System</h3>
+            <h3>
+                Bank Management
+                <span>System</span>
+            </h3>
+
+            <div class="featured-description">
+
+                <p>
+                    Full desktop banking system implementing
+                    real-world business logic, secure authentication,
+                    account management, and data integrity.
+                </p>
+
+                <p>
+                    Designed using a clean 3-Tier architecture with
+                    separation between presentation, business logic,
+                    and data access.
+                </p>
+
+            </div>
+
+            <div class="featured-tech">
+
+                <span>C#</span>
+                <span>SQL</span>
+                <span>OOP</span>
+                <span>3-Tier Architecture</span>
+
+            </div>
+
+            <a
+                href="https://github.com/Anouar-Derja/PrBank-Management-System"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="featured-project-btn"
+            >
+                View on GitHub
+                <i class="ph-bold ph-arrow-up-right"></i>
+            </a>
+
         </div>
 
-        <p class="project-desc">
-          Administrative management system designed with SOLID principles
-          and structured business logic to ensure maintainability,
-          scalability, and clear separation of concerns.
-        </p>
+    </article>
 
-        <div class="project-tech">
-          <strong>TECH:</strong> C#, SQL, OOP, SOLID PRINCIPLES
+
+    <!-- =====================================================
+         PROJECT 03 — DVLD
+         ===================================================== -->
+
+    <article class="featured-project reveal">
+
+        <div class="featured-project-info">
+
+            <span class="featured-project-number">
+                03
+            </span>
+
+            <span class="featured-project-label">
+                Management System
+            </span>
+
+            <h3>
+                DVLD
+                <span>Management System</span>
+            </h3>
+
+            <div class="featured-description">
+
+                <p>
+                    Administrative management system designed with
+                    SOLID principles and structured business logic
+                    to ensure maintainability and scalability.
+                </p>
+
+                <p>
+                    The system focuses on clear separation of concerns,
+                    object-oriented programming, and maintainable
+                    application architecture.
+                </p>
+
+            </div>
+
+            <div class="featured-tech">
+
+                <span>C#</span>
+                <span>SQL</span>
+                <span>OOP</span>
+                <span>SOLID Principles</span>
+
+            </div>
+
+            <a
+                href="https://github.com/Anouar-Derja/PrDVLD_Project"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="featured-project-btn"
+            >
+                View on GitHub
+                <i class="ph-bold ph-arrow-up-right"></i>
+            </a>
+
         </div>
 
-        <div class="project-screenshot">
-          <img
-            src="dvld-system-preview.png"
-            alt="DVLD Management System Screenshot"
-          >
+
+        <div class="featured-project-visual">
+
+            <div class="project-image-frame">
+
+                <img
+                    src="dvld-system-preview.png"
+                    alt="DVLD Management System Screenshot"
+                >
+
+                <div class="project-image-glow"></div>
+
+            </div>
+
+            <div class="project-floating-card">
+
+                <div class="floating-card-top">
+
+                    <span class="floating-dot"></span>
+
+                    <span>DVLD</span>
+
+                    <span class="floating-status">
+                        SYSTEM
+                    </span>
+
+                </div>
+
+                <p>
+                    Management software focused on structured
+                    business logic and maintainable architecture.
+                </p>
+
+            </div>
+
         </div>
 
-        <a
-          href="https://github.com/Anouar-Derja/PrDVLD_Project"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="project-btn"
-        >
-          View on GitHub
-        </a>
+    </article>
 
-      </div>
-    </div>
 
-     <!-- Project 04: Clothes Store -->
-    <div class="project-card reveal">
-      <div class="project-content-inner">
+    <!-- =====================================================
+         PROJECT 04 — CLOTHES STORE
+         ===================================================== -->
 
-        <div class="project-header">
-          <span class="project-icon">
-            <i class="ph-bold ph-shopping-cart"></i>
-          </span>
-          <h3>Clothes Store (Frontend)</h3>
+    <article class="featured-project featured-project-reverse reveal">
+
+        <div class="featured-project-visual">
+
+            <div class="project-image-frame">
+
+                <img
+                    src="clothes-store-preview.png"
+                    alt="Clothes Store Screenshot"
+                >
+
+                <div class="project-image-glow"></div>
+
+            </div>
+
+            <div class="project-floating-card">
+
+                <div class="floating-card-top">
+
+                    <span class="floating-dot"></span>
+
+                    <span>CLOTHES STORE</span>
+
+                    <span class="floating-status">
+                        FRONTEND
+                    </span>
+
+                </div>
+
+                <p>
+                    E-commerce frontend with product search,
+                    category filtering, cart management, and
+                    persistent client-side storage.
+                </p>
+
+            </div>
+
         </div>
 
-        <p class="project-desc">
-          E-commerce-style frontend application featuring product search,
-          category filtering, cart management, and persistent client-side
-          storage using IndexedDB.
-        </p>
 
-        <div class="project-tech">
-          <strong>TECH:</strong> HTML, CSS, JAVASCRIPT, INDEXEDDB
+        <div class="featured-project-info">
+
+            <span class="featured-project-number">
+                04
+            </span>
+
+            <span class="featured-project-label">
+                Frontend Application
+            </span>
+
+            <h3>
+                Clothes Store
+                <span>Frontend</span>
+            </h3>
+
+            <div class="featured-description">
+
+                <p>
+                    E-commerce-style frontend application featuring
+                    product search, category filtering, cart management,
+                    and persistent client-side storage.
+                </p>
+
+                <p>
+                    Built as a responsive shopping experience with
+                    IndexedDB used for persistent local data.
+                </p>
+
+            </div>
+
+            <div class="featured-tech">
+
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>IndexedDB</span>
+
+            </div>
+
+            <a
+                href="https://github.com/Anouar-Derja/PrClothes_Project"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="featured-project-btn"
+            >
+                View on GitHub
+                <i class="ph-bold ph-arrow-up-right"></i>
+            </a>
+
         </div>
 
-        <div class="project-screenshot">
-          <img
-            src="clothes-store-preview.png"
-            alt="Clothes Store Screenshot"
-          >
+    </article>
+
+
+    <!-- =====================================================
+         PROJECT 05 — ROCK PAPER SCISSORS
+         ===================================================== -->
+
+    <article class="featured-project reveal">
+
+        <div class="featured-project-info">
+
+            <span class="featured-project-number">
+                05
+            </span>
+
+            <span class="featured-project-label">
+                Desktop Game
+            </span>
+
+            <h3>
+                Rock Paper
+                <span>Scissors</span>
+            </h3>
+
+            <div class="featured-description">
+
+                <p>
+                    Interactive desktop game built with C# and
+                    Windows Forms featuring user-versus-computer
+                    gameplay and real-time results.
+                </p>
+
+                <p>
+                    The project focuses on object-oriented programming,
+                    game logic, random computer choices, and a clean
+                    interactive desktop experience.
+                </p>
+
+            </div>
+
+            <div class="featured-tech">
+
+                <span>C#</span>
+                <span>WinForms</span>
+                <span>OOP</span>
+                <span>.NET Framework</span>
+
+            </div>
+
+            <a
+                href="https://github.com/Anouar-Derja/Rock-Paper-Scissors-Game"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="featured-project-btn"
+            >
+                View on GitHub
+                <i class="ph-bold ph-arrow-up-right"></i>
+            </a>
+
         </div>
 
-        <a
-          href="https://github.com/Anouar-Derja/PrClothes_Project"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="project-btn"
-        >
-          View on GitHub
-        </a>
 
-      </div>
-    </div>
+        <div class="featured-project-visual">
 
-    <!-- Project 05: Rock Paper Scissors -->
-<div class="project-card reveal">
-  <div class="project-content-inner">
+            <div class="project-image-frame">
 
-    <div class="project-header">
-      <span class="project-icon">
-        <i class="ph-bold ph-hand-fist"></i>
-      </span>
-      <h3>Rock Paper Scissors</h3>
-    </div>
+                <img
+                    src="rock-paper-scissors-preview.png"
+                    alt="Rock Paper Scissors Game Screenshot"
+                >
 
-    <p class="project-desc">
-      Interactive desktop game built with C# and Windows Forms, featuring
-      user-versus-computer gameplay, random computer choices, real-time
-      results, and clean object-oriented game logic.
-    </p>
+                <div class="project-image-glow"></div>
 
-    <div class="project-tech">
-      <strong>TECH:</strong> C#, WINFORMS, OOP, .NET FRAMEWORK
-    </div>
+            </div>
 
-    <div class="project-screenshot">
-      <img
-        src="rock-paper-scissors-preview.png"
-        alt="Rock Paper Scissors Game Screenshot"
-      >
-    </div>
+            <div class="project-floating-card">
 
-    <a
-      href="https://github.com/Anouar-Derja/Rock-Paper-Scissors-Game"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="project-btn"
-    >
-      View on GitHub
-    </a>
+                <div class="floating-card-top">
 
-  </div>
-</div>
+                    <span class="floating-dot"></span>
 
-<!-- Project 06: Math Game -->
-<div class="project-card reveal">
-  <div class="project-content-inner">
+                    <span>ROCK PAPER SCISSORS</span>
 
-    <div class="project-header">
-      <span class="project-icon">
-        <i class="ph-bold ph-calculator"></i>
-      </span>
-      <h3>Math Game</h3>
-    </div>
+                    <span class="floating-status">
+                        GAME
+                    </span>
 
-    <p class="project-desc">
-      Interactive math game built with C#,
-       It includes multiple difficulty levels and timed challenges to make the gameplay more engaging and competitive.
-    </p>
+                </div>
 
-    <div class="project-tech">
-      <strong>TECH:</strong> C#, OOP, .NET FRAMEWORK
-    </div>
+                <p>
+                    C# desktop game featuring interactive gameplay,
+                    random choices, and object-oriented game logic.
+                </p>
 
-    <div class="project-screenshot">
-      <img
-        src="math-game-preview.png"
-        alt="Math Game Screenshot"
-      >
-    </div>
+            </div>
 
-    <a
-      href="https://github.com/Anouar-Derja/PrMath-Game-with-C-"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="project-btn"
-    >
-      View on GitHub
-    </a>
+        </div>
 
-  </div>
-</div>
+    </article>
 
-  </div>
+
+    <!-- =====================================================
+         PROJECT 06 — MATH GAME
+         ===================================================== -->
+
+    <article class="featured-project featured-project-reverse reveal">
+
+        <div class="featured-project-visual">
+
+            <div class="project-image-frame">
+
+                <img
+                    src="math-game-preview.png"
+                    alt="Math Game Screenshot"
+                >
+
+                <div class="project-image-glow"></div>
+
+            </div>
+
+            <div class="project-floating-card">
+
+                <div class="floating-card-top">
+
+                    <span class="floating-dot"></span>
+
+                    <span>MATH GAME</span>
+
+                    <span class="floating-status">
+                        GAME
+                    </span>
+
+                </div>
+
+                <p>
+                    Interactive mathematics game with multiple
+                    difficulty levels and timed challenges.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="featured-project-info">
+
+            <span class="featured-project-number">
+                06
+            </span>
+
+            <span class="featured-project-label">
+                Desktop Game
+            </span>
+
+            <h3>
+                Math
+                <span>Game</span>
+            </h3>
+
+            <div class="featured-description">
+
+                <p>
+                    Interactive math game built with C# and
+                    object-oriented programming principles.
+                </p>
+
+                <p>
+                    Includes multiple difficulty levels and
+                    timed challenges designed to make the gameplay
+                    more engaging and competitive.
+                </p>
+
+            </div>
+
+            <div class="featured-tech">
+
+                <span>C#</span>
+                <span>OOP</span>
+                <span>.NET Framework</span>
+
+            </div>
+
+            <a
+                href="https://github.com/Anouar-Derja/PrMath-Game-with-C-"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="featured-project-btn"
+            >
+                View on GitHub
+                <i class="ph-bold ph-arrow-up-right"></i>
+            </a>
+
+        </div>
+
+    </article>
+
 </section>
 
 <!-- CONTACT -->
@@ -1187,7 +1223,7 @@
 
 <!-- FOOTER -->
 <footer class="footer">
- <div id="particles-js"></div>
+ 
 
   <div class="footer-content">
     <a href="https://www.linkedin.com/in/anouar-derja/" target="_blank">
@@ -1199,63 +1235,7 @@
   </div>
 </footer>
 
-<script>
-tsParticles.load("particles-js", {
-  background: {
-    color: "#000000"
-  },
-distance: 180,
-  particles: {
-    number: {
-      value: 80
-    },
 
-    color: {
-      value: "#8b5cf6"
-    },
-
-    links: {
-      enable: true,
-      color: "#8b5cf6",
-      distance: 140,
-      opacity: 0.18,
-      width: 1
-    },
-
-    move: {
-      enable: true,
-      speed: 1
-    },
-
-    opacity: {
-      value: 0.5
-    },
-
-    size: {
-      value: { min: 1, max: 3 }
-    }
-  },
-
-  interactivity: {
-    events: {
-      onHover: {
-        enable: true,
-        mode: "grab"
-      }
-    },
-
-    modes: {
-      grab: {
-        distance: 180,
-
-        links: {
-          opacity: 0.5
-        }
-      }
-    }
-  }
-});
-</script>
 
 
 
@@ -1291,3 +1271,4 @@ form.addEventListener("submit", function(e) {
 
 <script src="script.js"></script>
 </html>
+
